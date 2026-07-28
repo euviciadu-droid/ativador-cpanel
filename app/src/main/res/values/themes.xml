@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AtivadorTVDigital" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0EA5E9</item>
+        <item name="colorPrimaryVariant">#0369A1</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">#0F172A</item>
+    </style>
+</resources>

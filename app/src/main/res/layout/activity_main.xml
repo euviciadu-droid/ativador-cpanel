@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Container central com largura máxima (fica ótimo em TV box widescreen e celular) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:maxWidth="520dp">
+
+            <ImageView
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/ic_tv_digital_logo"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#F8FAFC"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/subtitle_main"
+                android:textColor="#94A3B8"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="18dp"
+                android:paddingHorizontal="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CÓDIGO DE ATIVAÇÃO"
+                    android:textColor="#38BDF8"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.2"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/inputCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="@string/hint_code"
+                    android:textColorHint="#334155"
+                    android:textColor="#F8FAFC"
+                    android:background="@drawable/bg_code_input"
+                    android:inputType="number"
+                    android:imeOptions="actionGo"
+                    android:singleLine="true"
+                    android:maxLength="6"
+                    android:digits="0123456789"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/btnActivate"
+                    android:gravity="center"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.4"
+                    android:fontFamily="monospace"
+                    android:paddingHorizontal="16dp" />
+
+                <Button
+                    android:backgroundTint="@null"
+                    android:id="@+id/btnActivate"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="@string/btn_activate"
+                    android:background="@drawable/bg_button"
+                    android:textColor="#0B1120"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:letterSpacing="0.15"
+                    android:stateListAnimator="@null"
+                    android:nextFocusUp="@id/inputCode"
+                    android:layout_marginTop="16dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:visibility="gone"
+                    android:max="100"
+                    android:progress="0"
+                    android:indeterminate="true"
+                    android:indeterminateTint="#22D3EE"
+                    android:progressTint="#22D3EE"
+                    android:progressBackgroundTint="#1E293B"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_idle"
+                    android:textColor="#CBD5E1"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginTop="14dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TV Digital · Ativação segura"
+                android:textColor="#475569"
+                android:textSize="11sp"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

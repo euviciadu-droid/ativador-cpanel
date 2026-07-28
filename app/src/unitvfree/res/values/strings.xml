@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:override="true">Gerador UniTvFree</string>
+    <string name="unitv_subtitle">Compatível com Android, Google TV e todos TV BOX</string>
+    <string name="unitv_hint_navigate">Use seu controle remoto para navegar!</string>
+    <string name="unitv_label_code">Digite o código da licença</string>
+    <string name="unitv_step1">Passo 1 – Ativar</string>
+    <string name="unitv_step2">Passo 2 – Instalar UniTvFree</string>
+    <string name="unitv_step3">Passo 3 – Abrir UniTV</string>
+    <string name="unitv_step4">Passo 4 – Resetar UniTV</string>
+    <string name="unitv_reset_license">Resetar licença</string>
+    <string name="unitv_clean_install">Instalação Limpa</string>
+</resources>

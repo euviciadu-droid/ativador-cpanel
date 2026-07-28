@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_unitv_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:maxWidth="560dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="4"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unitv_subtitle"
+                android:textColor="#FFF7C2"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unitv_hint_navigate"
+                android:textColor="#FFF7C2"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginBottom="14dp" />
+
+
+            <!-- Bloco de código (só visível antes da ativação) -->
+            <LinearLayout
+                android:id="@+id/codeBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unitv_label_code"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <EditText
+                    android:id="@+id/inputCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="000000"
+                    android:textColorHint="#B91C1C"
+                    android:textColor="#7F1D1D"
+                    android:background="@drawable/bg_unitv_code_input"
+                    android:inputType="number"
+                    android:imeOptions="actionGo"
+                    android:singleLine="true"
+                    android:maxLength="6"
+                    android:digits="0123456789"
+                    android:maxLines="1"
+                    android:nextFocusDown="@id/btnStep1"
+                    android:gravity="center"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.4"
+                    android:fontFamily="monospace"
+                    android:paddingHorizontal="14dp" />
+
+
+                <Button
+                    android:backgroundTint="@null"
+                    android:id="@+id/btnStep1"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:text="@string/unitv_step1"
+                    android:background="@drawable/bg_button_unitv_yellow"
+                    android:textColor="#7C2D12"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:letterSpacing="0.1"
+                    android:stateListAnimator="@null"
+                    android:nextFocusUp="@id/inputCode"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+
+            <!-- Bloco secreto (código 999999) -->
+            <LinearLayout
+                android:id="@+id/secretBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:backgroundTint="@null"
+                    android:id="@+id/btnCleanAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:text="LIMPAR TUDO"
+                    android:background="@drawable/bg_button_unitv_dark"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:stateListAnimator="@null"
+                    android:nextFocusDown="@id/btnResetLicense"
+                    android:layout_marginTop="16dp" />
+
+                <Button
+                    android:backgroundTint="@null"
+                    android:id="@+id/btnResetLicense"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="@string/unitv_reset_license"
+                    android:background="@drawable/bg_button_unitv_dark"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:nextFocusUp="@id/btnCleanAll"
+                    android:stateListAnimator="@null"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Bloco pós-ativação (só visível após ativar) -->
+            <LinearLayout
+                android:id="@+id/postBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtLicense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#FFF7C2"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:backgroundTint="@null"
+                    android:id="@+id/btnStep2"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="@string/unitv_step2"
+                    android:background="@drawable/bg_button_unitv_yellow"
+                    android:textColor="#7C2D12"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:stateListAnimator="@null"
+                    android:nextFocusDown="@id/btnStep3"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:backgroundTint="@null"
+                    android:id="@+id/btnStep3"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="@string/unitv_step3"
+                    android:background="@drawable/bg_button_unitv_yellow"
+                    android:textColor="#7C2D12"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:stateListAnimator="@null"
+                    android:nextFocusUp="@id/btnStep2"
+                    android:layout_marginBottom="8dp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:visibility="gone"
+                android:max="100"
+                android:progress="0"
+                android:indeterminate="true"
+                android:indeterminateTint="#FCD34D"
+                android:progressTint="#FCD34D"
+                android:progressBackgroundTint="#7F1D1D"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Digite o código de 6 dígitos"
+                android:textColor="#FFF7C2"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ativador TV Digital</string>
+    <string name="hint_code">000000</string>
+    <string name="btn_activate">ATIVAR</string>
+    <string name="status_idle">Digite o código de 6 dígitos</string>
+    <string name="title_main">Bem-vindo</string>
+    <string name="subtitle_main">Insira seu código de ativação para liberar o acesso</string>
+</resources>
